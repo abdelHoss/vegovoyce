@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://dsm01pap005files.storage.live.com/y4mOdKBBCbCQB5vBicLKpNrt_G9B5vC-jJYeBEX9hobuS-m7GYge7j_FDUAugGF9rKqCNXyvljoB6WjF455WL4cyOvJ0Ad4oYck7p9dplUmOpz8NdBcJApID07yuCHl4LAymJY2LXWdE-T-xecP5vJQzNZXnniZGCBY4PTSV0S8OjEA8zc3hsaCIW3Tr6s0suWF?width=300&height=300&cropmode=none"
+      type="image/x-icon"
+    />
+    <title>Ebook</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Source Sans Pro";
+        background: #e0f3eb;
+      }
+
+      header {
+        border-bottom: 2px solid #5a5dbe;
+        padding: 20px;
+      }
+
+      .header-title {
+        font-size: 3rem;
+        font-weight: bolder;
+        margin-right: 20px;
+        color: #5a5dbe;
+      }
+
+      .header-logo {
+        width: 60px;
+        vertical-align: bottom;
+      }
+
+      .ebook-cover {
+        width: 250px;
+        margin: 2% calc((100% - 250px) / 2);
+        border: 2px solid #5a5dbe;
+      }
+
+      .body-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin: 2% auto 1%;
+      }
+
+      .body-subtitle {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+
+      .download-button {
+        width: 20%;
+        background: #5a5dbe;
+        color: #fff;
+        font-size: 40px;
+        padding: 10px;
+        text-align: center;
+        margin: 2% calc(40% - 10px);
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .download-button:hover {
+        background: #7f81c4;
+      }
+      .header-link:hover {
+        color: #7f81c4;
+      }
+
+      .header-link {
+        float: right;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: #5a5dbe;
+        font-weight: bold;
+        margin-top: -30px;
+      }
+
+      @media screen and (max-width: 820px) {
+        .body-title {
+          margin-top: 5%;
+        }
+
+        .body-subtitle {
+          width: 90%;
+          margin: 5% auto;
+        }
+
+        .download-button {
+          width: 200px;
+          margin: 2% auto;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .header-title {
+          display: none;
+        }
+
+        .body-title {
+          font-size: 1.5rem;
+        }
+
+        .body-subtitle {
+          font-size: 1.2rem;
+        }
+
+        .download-button {
+          font-size: 1.5rem;
+          width: 150px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div style="width: 50%">
+        <span class="header-title">VegoVoyce</span>
+        <img
+          class="header-logo"
+          src="https://dsm01pap005files.storage.live.com/y4mOdKBBCbCQB5vBicLKpNrt_G9B5vC-jJYeBEX9hobuS-m7GYge7j_FDUAugGF9rKqCNXyvljoB6WjF455WL4cyOvJ0Ad4oYck7p9dplUmOpz8NdBcJApID07yuCHl4LAymJY2LXWdE-T-xecP5vJQzNZXnniZGCBY4PTSV0S8OjEA8zc3hsaCIW3Tr6s0suWF?width=300&height=300&cropmode=none"
+          alt="header logo"
+        />
+      </div>
+      <div>
+        <a href="/" class="header-link">Home</a>
+      </div>
+    </header>
+    <div>
+      <h1 class="body-title">Thank you for your interest in our ebook</h1>
+      <h3 class="body-subtitle">
+        If your ebook didn't start downloading click the download button on the
+        bottom of the page
+      </h3>
+      <div>
+        <img
+          class="ebook-cover"
+          src="https://dsm01pap005files.storage.live.com/y4mK_lxU3T2Hd3Fscdl4qo5EF-KkDMdvlTtLj1GO6XQLV9y1f6oXrQiGmMwVQfo-jk6359q-ELVL6hxmyNFR753OzcNN3XQzNoCVz6rN_mXgKc-V7CMPPgYZ7u_UkMGE3d8DYHpyYQlVn9fvE9kZOAAN2IndqjadBXn5Jw7tICFb4uPPhCoEB2gtpkg1vRgFU8b?width=512&height=800&cropmode=none"
+          alt="Ebook cover album"
+        />
+        <div class="download-button" onclick="downloadEbook()">Download</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    window.onload = () => downloadEbook();
+
+    const downloadEbook = () => {
+      const anchor = document.createElement("a");
+      anchor.href = "../content/40 vegan recipes by VegoVoyce.pdf";
+      anchor.download = "40 vegan recipes by VegoVoyce.pdf";
+      document.body.appendChild(anchor);
+      anchor.click();
+      document.removeChild(anchor);
+    };
+  </script>
+</html>

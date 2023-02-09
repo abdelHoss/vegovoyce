@@ -1,0 +1,90 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+
+@font-face {
+  font-family: "Source Sans Pro" !important;
+  src: url(../fonts/SourceSansPro-Regular.ttf);
+}
+
+:root {
+  --va-input-min-height: 60px;
+  --va-input-font-size: 1.4rem;
+  --va-input-font-weight: bolder;
+  --animate-delay: 0.5s;
+}
+
+::selection {
+  color: #fff;
+  background: #5a5dbe;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #5a5dbe;
+}
+
+body {
+  font-family: "Source Sans Pro";
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5A5DBE;
+}
+.va-navbar {
+  transition: 1s linear;
+  z-index: 1;
+  --va-navbar-height: 6rem;
+}
+.content {
+  margin: 10% auto 0;
+  width: 60%;
+  text-align: right;
+}
+
+.reverse-container {
+  width: 100%;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url(../../assets/images/bg-header-reverse.png);
+}
+
+.child-container {
+  text-align: center;
+  padding-top: 15%;
+  min-height: 100vh;
+}
+
+.no-result {
+  text-align: center;
+  margin-top: 2%;
+}
+
+
+.terms-block {
+  margin-top: 5%;
+}
+.terms-block h1 {
+  text-align: center;
+}
+
+.terms-text-block {
+  margin-bottom: 5%;
+}
+
+.terms-text-block p {
+  font-size: 1.2rem;
+  margin-bottom: 1%;
+}
+
+.terms-text-block p strong {
+  font-size: 1.3rem;
+}
+
+.terms-text-block ul li {
+  font-size: 1.2rem;
+  margin-bottom: 1%;
+}

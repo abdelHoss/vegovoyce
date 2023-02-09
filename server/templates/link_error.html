@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://dsm01pap005files.storage.live.com/y4mOdKBBCbCQB5vBicLKpNrt_G9B5vC-jJYeBEX9hobuS-m7GYge7j_FDUAugGF9rKqCNXyvljoB6WjF455WL4cyOvJ0Ad4oYck7p9dplUmOpz8NdBcJApID07yuCHl4LAymJY2LXWdE-T-xecP5vJQzNZXnniZGCBY4PTSV0S8OjEA8zc3hsaCIW3Tr6s0suWF?width=300&height=300&cropmode=none"
+      type="image/x-icon"
+    />
+    <title>Ebook</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Source Sans Pro";
+        background: #e0f3eb;
+      }
+
+      header {
+        border-bottom: 2px solid #5a5dbe;
+        padding: 20px;
+      }
+
+      .header-title {
+        font-size: 3rem;
+        font-weight: bolder;
+        margin-right: 20px;
+        color: #5a5dbe;
+      }
+
+      .header-logo {
+        width: 60px;
+        vertical-align: bottom;
+      }
+
+      .body-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin: 2% auto 1%;
+        color: #ee3232;
+      }
+
+      .body-subtitle {
+        text-align: center;
+        font-size: 1.5rem;
+        color: #ee3232;
+      }
+
+      .home-button {
+        width: 200px !important;
+        text-decoration: none;
+        background-color: #5a5dbe;
+        padding: 10px;
+        color: #fff;
+        margin: 5% auto;
+        text-align: center;
+        font-size: 1.5rem;
+        border-radius: 10px;
+      }
+
+      .home-button:hover {
+        background: #7f81c4;
+      }
+
+      .header-link:hover {
+        color: #7f81c4;
+      }
+
+      .header-link {
+        float: right;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: #5a5dbe;
+        font-weight: bold;
+        margin-top: -30px;
+      }
+
+      @media screen and (max-width: 820px) {
+        .body-container {
+          margin-top: 100px;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .body-container {
+          margin-top: 50px;
+        }
+
+        .header-title {
+          display: none;
+        }
+
+        .header-logo {
+          width: 50px;
+        }
+
+        .header-link {
+          font-size: 1.2rem;
+        }
+
+        .body-title {
+          margin-bottom: 5%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div style="width: 50%">
+        <span class="header-title">VegoVoyce</span>
+        <img
+          class="header-logo"
+          src="https://dsm01pap005files.storage.live.com/y4mOdKBBCbCQB5vBicLKpNrt_G9B5vC-jJYeBEX9hobuS-m7GYge7j_FDUAugGF9rKqCNXyvljoB6WjF455WL4cyOvJ0Ad4oYck7p9dplUmOpz8NdBcJApID07yuCHl4LAymJY2LXWdE-T-xecP5vJQzNZXnniZGCBY4PTSV0S8OjEA8zc3hsaCIW3Tr6s0suWF?width=300&height=300&cropmode=none"
+          alt="header logo"
+        />
+      </div>
+      <div>
+        <a href="/" class="header-link">Home</a>
+      </div>
+    </header>
+    <div class="body-container">
+      <h1 class="body-title">Error</h1>
+      <h3 class="body-subtitle">
+        {% block content %} {% if registered %}
+        <div>You have already accessed this link</div>
+        {% else %}
+        <div>This link is either invalid or has expired</div>
+        {% endif %} {% endblock content %}
+      </h3>
+      <a href="/" style="text-decoration: none">
+        <div class="home-button">Return Home</div>
+      </a>
+    </div>
+  </body>
+</html>
